@@ -4,6 +4,8 @@ BookReviewApp::Application.routes.draw do
 
   get "reviews/index"
 
+  resources :reviews
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

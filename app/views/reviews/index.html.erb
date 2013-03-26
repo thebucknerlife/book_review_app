@@ -1,9 +1,14 @@
-<h> table of reviews </h>
-<table border="1">
-	<% @reviews.each do |review| %>
-		<tr>
-		<td> <%= review.book.title %> </td>
-		<td> <%= review.user.first_name %> + <%= review.user.last_name %> </td>
-		</tr>
-	<% end %>
+<h><font size="5"><b>Table of Reviews</b></font></h>
+<p>
+<table border="1" cellpadding="10">
+	<tr>
+		<td><b>Book Title</b></td>
+		<td><b>Reviewer's Name</b></td>
+	</tr>
+<% @reviews.each do |review| %>
+	<tr>
+		<td> <%=review.book.title %> </td>
+		<td> <%= review.user.first_name %> <%=review.user.last_name %></td>
+	</tr>
+<% end %>
 </table>
